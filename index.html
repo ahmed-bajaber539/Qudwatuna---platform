@@ -1,25 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Qudwatuna</title>
-    <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="./src/css/output.css">
-    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./node_modules/swiper/swiper-element-bundle.min.css">
-    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
-</head>
-<body>
-    
-   
-    
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/output.css" />
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/swiper/swiper-element-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body dir="rtl">
+    <header class="fixed top-0 left-0 w-full z-50">
+      <nav
+        class="bg-white/10 backdrop-blur-md flex items-center justify-between"
+      >
+        <div class="flex items-center justify-between w-full px-4 py-2">
+          <img
+            src="./src/img/logo-Qudwatuna.png"
+            alt="شعار قدوتنا"
+            class="h-10 cursor-pointer "
+          />
+          <i class="fa-solid fa-bars text-white cursor-pointer  "></i>
+          <ul class="hidden sm:hidden md:flex gap-4 items-center text-white text-lg    "  >
+            <li>
+              <a href="#">الرئيسية</a>
+            </li>
+            <li>
+              <a href="#">قدواتنا</a>
+            </li>
+            <li>
+              <a href="#">معلومات</a>
+            </li>
+            <li>
+              <a href="#">حول</a>
+            </li>
+            <li>
+              <a href="#">تواصل معنا</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-    
-    
+    <section class="relative w-full h-screen overflow-hidden">
+      <div class="bg-[#0C0C0C]">
+        <div class="flex flex-col items-center justify-center text-white">
+          <p class="text-[40px] font-bold text-center text-amber-50 pt-20 text-base/20 ">
+            من عزّة المـاضــــي نستلهم حاضرنا، وبخطاهم نبـــنـــــي
+            مــــســــتـــقـــبـــلـــنـــــا
+          </p>
+          <input
+            type="button"
+            value="اكتشف الان"
+            class="bg-amber-200 text-black font-bold py-2 px-4 rounded mt-4 hover:bg-green-950 transition duration-300 hover:text-white hover:scale-110 hover:shadow-lg cursor-pointer"
+          />
+        </div class=" static w-full h-screen flex items-center justify-center">
+        <div class="bg-amber-300/10 w-screen h-screen rounded-full blur-2xl z-0 " ></div>
+        <img src="./src/img/pic-01.png" alt="man" class=" relative m-0 p-0 " />
+      </div>
+    </section>
 
     <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
     <script src="./node_modules/swiper/swiper-element-bundle.min.js"></script>
     <script src="./node_modules/aos/dist/aos.js"></script>
-</body>
+  </body>
 </html>
