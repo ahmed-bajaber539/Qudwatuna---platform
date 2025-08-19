@@ -60,15 +60,7 @@ function copyQuote(btn) {
       });
 
 // زر العودة للأعلى
-const scrollBtn = document.getElementById("scrollTopBtn");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollBtn.classList.remove("hidden");
-  } else {
-    scrollBtn.classList.add("hidden");
-  }
-});
 (function () {
   const btn = document.getElementById('scrollTopBtn');
   if (!btn) return;
@@ -95,4 +87,14 @@ window.addEventListener("scroll", () => {
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('load', onScroll);
   document.addEventListener('DOMContentLoaded', onScroll);
+})();
+// فتح القصص من بطاقات قدواتنا في الرئيسية
+(function () {
+  const cards = document.querySelectorAll('[data-story-id]');
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const id = card.getAttribute('data-story-id');
+      if (id) window.location.href = `story.html?id=${encodeURIComponent(id)}`;
+    });
+  });
 })();

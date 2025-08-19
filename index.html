@@ -83,7 +83,7 @@
             <li>
               <a
                 class="flex items-center gap-2 text-gray-700 hover:text-[#B5964D] transition-colors"
-                href="#quotes"
+                href="quotes.html"
               >
                 <i class="fa-solid fa-quote-left"></i>
                 <span>حِكم</span>
@@ -128,7 +128,7 @@
             <li>
               <a
                 class="flex items-center gap-2 py-2 text-gray-700 hover:text-[#B5964D] transition-colors"
-                href="#quotes"
+                href="quotes.html"
               >
                 <i class="fa-solid fa-quote-left"></i>
                 <span>حِكم</span>
@@ -154,35 +154,53 @@
 
       <!-- ====================== Hero ====================== -->
       <section
-        class="relative w-screen min-h-[80vh] bg-[#0C0C0C] overflow-hidden"
+        id="hero"
+        class="relative w-full overflow-hidden bg-[#0C0C0C] h-[calc(100vh-64px)] md:h-[calc(100vh-80px)]"
       >
-        <!-- خلفية دائرية ناعمة -->
         <div
-          class="absolute -bottom-40 right-1/2 translate-x-1/2 w-[520px] h-[520px] rounded-full bg-[#B5964D]/40 blur-3xl"
+          aria-hidden="true"
+          class="pointer-events-none absolute -bottom-10 left-1/2 -translate-x-1/2 w-[460px] h-[460px] rounded-full bg-[#B5964D]/35 blur-3xl md:bottom-0 md:left-auto md:right-16 md:translate-x-0 md:w-[600px] md:h-[600px]"
         ></div>
-        <div class="relative z-10 container mx-auto px-4">
-          <div class="text-white text-center pt-16 md:pt-24" data-aos="fade-up">
-            <h1 class="text-[36px] md:text-[44px] font-bold leading-[1.4]">
-              من عِزّة الماضي<br />نستلهم حاضرنا<br />ونبني مستقبلنا
-            </h1>
-            <button
-              class="bg-[#B5964D] hover:brightness-110 active:scale-95 transition px-6 py-2 mt-8 font-bold text-white rounded-xl"
-              onclick="document.getElementById('qudwatuna').scrollIntoView({ behavior: 'smooth' })"
+
+        <div class="relative z-10 h-full">
+          <div
+            class="container mx-auto px-4 h-full flex flex-col md:flex-row-reverse items-center justify-center gap-3"
+          >
+            <div
+              class="w-full md:w-1/2 text-white text-center md:text-start translate-y-30 z-10"
+              data-aos="fade-right"
+              data-aos-duration="800"
             >
-              اكتشف الآن
-            </button>
-          </div>
-          <div class="relative">
-            <img
-              src="./src/img/pic-01.png"
-              alt="صورة رئيسية"
-              class="mx-auto mt-10 md:mt-16 max-w-[760px] w-[92%] object-contain"
-              data-aos="zoom-in-up"
-              data-aos-delay="150"
-            />
+              <h1
+                class="font-extrabold leading-[1.35] tracking-wide text-[28px] sm:text-[34px] md:text-[44px] lg:text-[52px]"
+              >
+                من عِزّة الماضي نستلهم حاضرنا ونبني مستقبلنا
+              </h1>
+
+              <button
+                class="mt-7 inline-flex items-center justify-center px-6 py-2 rounded-xl font-bold bg-[#B5964D] text-white shadow hover:brightness-110 active:scale-95 transition"
+                onclick="document.getElementById('qudwatuna')?.scrollIntoView({ behavior: 'smooth' })"
+              >
+                اكتشف الآن
+              </button>
+            </div>
+
+            <div
+              class="order-2 md:order-1 w-full md:w-[58%] flex justify-center md:justify-end z-0"
+              data-aos="fade-left"
+              data-aos-delay="120"
+              data-aos-duration="800"
+            >
+              <img
+                src="./src/img/pic-01.png"
+                alt="محارب من الماضي"
+                class="object-contain select-none drop-shadow-2xl transform-gpu w-full max-w-[800px] sm:max-w-[680px] md:max-w-[1000px] lg:max-w-[1150px] max-h-[80vh] sm:max-h-[70vh] md:max-h-[90vh] lg:max-h-[100vh] scale-125 sm:scale-100 md:scale-400 lg:scale-125 translate-y-55 sm:translate-y-[100px] md:translate-y-[200px] lg:translate-y-[160px]"
+              />
+            </div>
           </div>
         </div>
       </section>
+
       <!-- ====================== Quotes / قصص ملهمة ====================== -->
       <section
         id="qudwatuna"
@@ -201,10 +219,11 @@
           <div class="swiper" data-aos="fade-up" data-aos-delay="100">
             <div class="swiper-wrapper">
               <!-- شريحة 1 -->
-              <div class="swiper-slide flex justify-center">
+              <div class="swiper-slide flex justify-center cursor-pointer ">
                 <article
                   class="relative rounded-2xl bg-white overflow-hidden shadow-[0_12px_24px_rgba(0,0,0,.12)]"
-                >
+                  data-story-id="ali">
+
                   <img
                     class="w-full h-full object-cover"
                     src="./src/img/1.jpg"
@@ -214,10 +233,12 @@
               </div>
 
               <!-- شريحة 2 -->
-              <div class="swiper-slide flex justify-center">
+              <div class="swiper-slide flex justify-center cursor-pointer ">
                 <article
-                  class="relative rounded-2xl bg-white overflow-hidden shadow-[0_12px_24px_rgba(0,0,0,.12)]"
-                >
+                
+                class="relative rounded-2xl bg-white overflow-hidden shadow-[0_12px_24px_rgba(0,0,0,.12)]"
+                data-story-id="zubair">
+                
                   <img
                     class="w-full h-full object-cover"
                     src="./src/img/2.jpg"
@@ -227,10 +248,11 @@
               </div>
 
               <!-- شريحة 3 -->
-              <div class="swiper-slide flex justify-center">
+              <div class="swiper-slide flex justify-center cursor-pointer">
                 <article
                   class="relative rounded-2xl bg-white overflow-hidden shadow-[0_12px_24px_rgba(0,0,0,.12)]"
-                >
+                  data-story-id="uthman">
+                
                   <img
                     class="w-full h-full object-cover"
                     src="./src/img/3.jpg"
@@ -239,24 +261,14 @@
                 </article>
               </div>
 
-              <!-- شريحة 4 -->
-              <div class="swiper-slide flex justify-center">
-                <article
-                  class="relative rounded-2xl bg-white overflow-hidden shadow-[0_12px_24px_rgba(0,0,0,.12)]"
-                >
-                  <img
-                    class="w-full h-full object-cover"
-                    src="./src/img/4.jpg"
-                    alt="قصة 4"
-                  />
-                </article>
-              </div>
+             
 
               <!-- شريحة 5 -->
-              <div class="swiper-slide flex justify-center">
+              <div class="swiper-slide flex justify-center cursor-pointer ">
                 <article
                   class="relative rounded-2xl bg-white overflow-hidden shadow-[0_12px_24px_rgba(0,0,0,.12)]"
-                >
+                  data-story-id="saad">
+                
                   <img
                     class="w-full h-full object-cover"
                     src="./src/img/5.jpg"
@@ -469,141 +481,220 @@
           </div>
         </div>
       </section>
-<!-- ====================== Vision / عن الموقع ====================== -->
-<section id="vision"
-  class="max-w-6xl mx-auto my-12 md:my-16 rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,.08)]">
+      <!-- ====================== Vision / عن الموقع ====================== -->
+      <section
+        id="vision"
+        class="max-w-6xl mx-auto my-12 md:my-16 rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,.08)]"
+      >
+        <!-- الشريط العلوي -->
+        <div class="bg-[#c9a453]/95 text-black text-center py-4">
+          <h2 class="text-2xl md:text-3xl font-extrabold tracking-wide">
+            عن الموقع / رؤيتنا
+          </h2>
+        </div>
 
-  <!-- الشريط العلوي -->
-  <div class="bg-[#c9a453]/95 text-black text-center py-4">
-    <h2 class="text-2xl md:text-3xl font-extrabold tracking-wide">عن الموقع / رؤيتنا</h2>
-  </div>
+        <!-- جسم السكشن -->
+        <div class="bg-[#F2F2F0] px-4 sm:px-8 py-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+            <!-- الصورة (مخفية في الموبايل، صغيرة في الكمبيوتر) -->
+            <div
+              class="hidden md:flex justify-center"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <img
+                src="./src/img/12.png"
+                alt="عن الموقع - رؤية قدوتنا"
+                class="object-contain drop-shadow-xl max-w-[250px] lg:max-w-[300px]"
+                loading="lazy"
+              />
+            </div>
 
-  <!-- جسم السكشن -->
-  <div class="bg-[#F2F2F0] px-4 sm:px-8 py-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
- <!-- الصورة (مخفية في الموبايل، صغيرة في الكمبيوتر) -->
-      <div class="hidden md:flex justify-center" data-aos="zoom-in" data-aos-delay="100">
-        <img
-          src="./src/img/12.png" 
-          alt="عن الموقع - رؤية قدوتنا"
-          class="object-contain drop-shadow-xl max-w-[250px] lg:max-w-[300px]"
-          loading="lazy" />
-      </div>
+            <!-- الصندوق النصي -->
+            <div data-aos="fade-up">
+              <div
+                class="bg-[#F2E9E1] rounded-2xl p-6 md:p-7 border border-[#E7D6C3] shadow-[0_8px_16px_rgba(0,0,0,.08)]"
+              >
+                <p class="text-gray-800 leading-relaxed">
+                  “موقع <span class="font-bold">قُدوتنا</span> هو منصة تهدف إلى
+                  نقل سير وأفكار أعظم القادة والصحابة والتابعين؛ نستلهِم من
+                  قصصهم العزم، الإيمان، والحِكمة. نؤمن أن الماضي يحمل دروسًا لا
+                  تنتهي، وأن السير على خُطاهم يفتح لنا أبواب المستقبل بثقة
+                  وطمأنينة.”
+                </p>
 
-      <!-- الصندوق النصي -->
-      <div data-aos="fade-up">
-        <div class="bg-[#F2E9E1] rounded-2xl p-6 md:p-7 border border-[#E7D6C3] shadow-[0_8px_16px_rgba(0,0,0,.08)]">
-          <p class="text-gray-800 leading-relaxed">
-            “موقع <span class="font-bold">قُدوتنا</span> هو منصة تهدف إلى نقل سير وأفكار أعظم القادة
-            والصحابة والتابعين؛ نستلهِم من قصصهم العزم، الإيمان، والحِكمة. نؤمن أن الماضي يحمل
-            دروسًا لا تنتهي، وأن السير على خُطاهم يفتح لنا أبواب المستقبل بثقة وطمأنينة.”
+                <!-- الزر مع هوفر -->
+                <a
+                  href="#qudwatuna"
+                  class="inline-flex items-center justify-center rounded-lg mt-6 bg-white text-[#B5964D] border border-[#B5964D] px-6 py-2 font-semibold shadow transition duration-300 hover:bg-[#B5964D] hover:text-white hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B5964D] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F2E9E1] active:scale-95"
+                >
+                  اكتشف الآن
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ====================== Footer ====================== -->
+    <footer class="bg-[#0C0C0C] text-white mt-16" id="footer">
+      <div
+        class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10"
+      >
+        <!-- العمود 1: الشعار + وصف -->
+        <div class="space-y-4 text-center md:text-start" data-aos="fade-up">
+          <img
+            src="./src/img/logo-Qudwatuna.png"
+            alt="شعار قدوتنا"
+            class="h-12 mx-auto md:mx-0"
+            loading="lazy"
+          />
+          <h3 class="font-bold text-xl tracking-wide">Qudwatuna</h3>
+          <p
+            class="text-gray-400 text-sm leading-relaxed max-w-md mx-auto md:mx-0"
+          >
+            “منصة قُدوتنا تنقل سير وأفكار القادة والصحابة والتابعين، لنستلهم
+            منهم العزم والإيمان ونبني مستقبلنا بثقة وطمأنينة.”
           </p>
 
-          <!-- الزر مع هوفر -->
-          <a href="#qudwatuna"
-             class="inline-flex items-center justify-center rounded-lg mt-6
-                    bg-white text-[#B5964D] border border-[#B5964D] px-6 py-2
-                    font-semibold shadow transition duration-300
-                    hover:bg-[#B5964D] hover:text-white hover:shadow-lg
-                    focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B5964D] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F2E9E1]
-                    active:scale-95">
-            اكتشف الآن
-          </a>
+          <!-- أيقونات السوشال (تكون هنا في الموبايل أسفل الشعار) -->
+          <div class="flex justify-center md:justify-start gap-4 pt-2 text-xl">
+            <a
+              href="#"
+              target="_blank"
+              class="hover:text-[#B5964D] transition"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              class="hover:text-[#B5964D] transition"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              class="hover:text-[#B5964D] transition"
+              aria-label="X"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- العمود 2: روابط سريعة -->
+        <div
+          class="space-y-3 text-center md:text-start"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <h4 class="font-bold text-lg mb-2">روابط سريعة</h4>
+          <ul
+            class="grid grid-cols-2 md:block gap-x-6 gap-y-2 text-gray-400 text-sm"
+          >
+            <li>
+              <a href="#" class="hover:text-[#B5964D] transition">الرئيسية</a>
+            </li>
+            <li>
+              <a href="#qudwatuna" class="hover:text-[#B5964D] transition"
+                >قدواتنا</a
+              >
+            </li>
+            <li>
+              <a href="#quotes" class="hover:text-[#B5964D] transition">حِكم</a>
+            </li>
+            <li>
+              <a href="#info" class="hover:text-[#B5964D] transition"
+                >معلومات</a
+              >
+            </li>
+            <li>
+              <a href="#vision" class="hover:text-[#B5964D] transition"
+                >عن الموقع</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- العمود 3: تواصل معنا -->
+        <div
+        id="contact"
+          class="space-y-3 text-center md:text-start"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <h4 class="font-bold text-lg mb-2">تواصل معنا</h4>
+          <ul class="space-y-3 text-gray-400 text-sm max-w-sm mx-auto md:mx-0">
+            <li class="flex items-center justify-center md:justify-start gap-2">
+              <i class="fa-solid fa-envelope text-[#B5964D]"></i>
+              <a
+                href="mailto:info@qudwatuna.com"
+                class="hover:text-[#B5964D] transition"
+                >info@qudwatuna.com</a
+              >
+            </li>
+            <li class="flex items-center justify-center md:justify-start gap-2">
+              <i class="fa-solid fa-phone text-[#B5964D]"></i>
+              <a
+                href="tel:+967000000000"
+                class="hover:text-[#B5964D] transition"
+                >+967 000 000 000</a
+              >
+            </li>
+          </ul>
+
+          <!-- سوشال أيضاً هنا في الديسكتوب (اختياري) -->
+          <div class="hidden md:flex gap-4 pt-2 text-xl">
+            <a
+              href="#"
+              target="_blank"
+              class="hover:text-[#B5964D] transition"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              class="hover:text-[#B5964D] transition"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              class="hover:text-[#B5964D] transition"
+              aria-label="X"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
         </div>
       </div>
 
-     
-    </div>
-  </div>
-</section>
+      <!-- خط فاصل للموبايل يعطي ترتيب أنظف -->
+      <div class="md:hidden border-t border-gray-800 mx-4"></div>
 
-    </main>
-<<!-- ====================== Footer ====================== -->
-<footer class="bg-[#0C0C0C] text-white mt-16">
-  <div class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-
-    <!-- العمود 1: الشعار + وصف -->
-    <div class="space-y-4 text-center md:text-start" data-aos="fade-up">
-      <img src="./src/img/logo-Qudwatuna.png" alt="شعار قدوتنا" class="h-12 mx-auto md:mx-0" loading="lazy" />
-      <h3 class="font-bold text-xl tracking-wide">Qudwatuna</h3>
-      <p class="text-gray-400 text-sm leading-relaxed max-w-md mx-auto md:mx-0">
-        “منصة قُدوتنا تنقل سير وأفكار القادة والصحابة والتابعين،
-        لنستلهم منهم العزم والإيمان ونبني مستقبلنا بثقة وطمأنينة.”
-      </p>
-
-      <!-- أيقونات السوشال (تكون هنا في الموبايل أسفل الشعار) -->
-      <div class="flex justify-center md:justify-start gap-4 pt-2 text-xl">
-        <a href="#" target="_blank" class="hover:text-[#B5964D] transition" aria-label="Facebook">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="#" target="_blank" class="hover:text-[#B5964D] transition" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="#" target="_blank" class="hover:text-[#B5964D] transition" aria-label="X">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
+      <!-- حقوق النشر -->
+      <div class="text-center py-4 text-gray-500 text-sm">
+        © 2025 <span class="font-semibold">Qudwatuna</span>. جميع الحقوق محفوظة.
       </div>
-    </div>
 
-    <!-- العمود 2: روابط سريعة -->
-    <div class="space-y-3 text-center md:text-start" data-aos="fade-up" data-aos-delay="100">
-      <h4 class="font-bold text-lg mb-2">روابط سريعة</h4>
-      <ul class="grid grid-cols-2 md:block gap-x-6 gap-y-2 text-gray-400 text-sm">
-        <li><a href="#" class="hover:text-[#B5964D] transition">الرئيسية</a></li>
-        <li><a href="#qudwatuna" class="hover:text-[#B5964D] transition">قدواتنا</a></li>
-        <li><a href="#quotes" class="hover:text-[#B5964D] transition">حِكم</a></li>
-        <li><a href="#info" class="hover:text-[#B5964D] transition">معلومات</a></li>
-        <li><a href="#vision" class="hover:text-[#B5964D] transition">عن الموقع</a></li>
-      </ul>
-    </div>
-
-    <!-- العمود 3: تواصل معنا -->
-    <div class="space-y-3 text-center md:text-start" data-aos="fade-up" data-aos-delay="200">
-      <h4 class="font-bold text-lg mb-2">تواصل معنا</h4>
-      <ul class="space-y-3 text-gray-400 text-sm max-w-sm mx-auto md:mx-0">
-        <li class="flex items-center justify-center md:justify-start gap-2">
-          <i class="fa-solid fa-envelope text-[#B5964D]"></i>
-          <a href="mailto:info@qudwatuna.com" class="hover:text-[#B5964D] transition">info@qudwatuna.com</a>
-        </li>
-        <li class="flex items-center justify-center md:justify-start gap-2">
-          <i class="fa-solid fa-phone text-[#B5964D]"></i>
-          <a href="tel:+967000000000" class="hover:text-[#B5964D] transition">+967 000 000 000</a>
-        </li>
-      </ul>
-
-      <!-- سوشال أيضاً هنا في الديسكتوب (اختياري) -->
-      <div class="hidden md:flex gap-4 pt-2 text-xl">
-        <a href="#" target="_blank" class="hover:text-[#B5964D] transition" aria-label="Facebook">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="#" target="_blank" class="hover:text-[#B5964D] transition" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="#" target="_blank" class="hover:text-[#B5964D] transition" aria-label="X">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- خط فاصل للموبايل يعطي ترتيب أنظف -->
-  <div class="md:hidden border-t border-gray-800 mx-4"></div>
-
-  <!-- حقوق النشر -->
-  <div class="text-center py-4 text-gray-500 text-sm">
-    © 2025 <span class="font-semibold">Qudwatuna</span>. جميع الحقوق محفوظة.
-  </div>
-
-  <!-- زر العودة للأعلى (يظهر/يختفي عبر JS) -->
-  <button id="scrollTopBtn"
-    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-    class="fixed bottom-20 right-5 w-10 h-10 rounded-full bg-[#B5964D] text-white shadow-lg flex items-center justify-center
-           transition duration-300 opacity-0 pointer-events-none translate-y-4 hover:brightness-110 active:scale-95"
-    aria-label="العودة للأعلى">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-</footer>
-
+      <!-- زر العودة للأعلى (يظهر/يختفي عبر JS) -->
+      <button
+        id="scrollTopBtn"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="fixed bottom-20 right-5 w-10 h-10 rounded-full bg-[#B5964D] text-white shadow-lg flex items-center justify-center transition duration-300 opacity-0 pointer-events-none translate-y-4 hover:brightness-110 active:scale-95"
+        aria-label="العودة للأعلى"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </footer>
 
     <!-- ====================== Scripts ====================== -->
     <!-- Swiper -->
