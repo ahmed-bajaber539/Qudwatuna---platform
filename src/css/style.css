@@ -1,1 +1,43 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Badeen+Display&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+/* Theme variables */
+@theme{
+  --primary-color: #B5964D;
+  --secondary-color: #F2E9E1;
+  --font-primary: 'Tajawal', sans-serif;
+  --font-secondary: 'Badeen Display', cursive;
+}
+
+/* ===== Marquee keyframes  الكارد المتحرك ===== */
+
+@keyframes marquee-rtl {      
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+/* اختفاء الاطراف في االمتحركه البطائق*/
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(to left, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+          mask-image: linear-gradient(to left, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: marquee-rtl 20s linear infinite;     /* الافتراضي مع صفحات RTL */
+}
+/* إيقاف الحركة على الهوفر */
+.marquee-track:hover { animation-play-state: paused; }
+
+/*تأثيرات  للبطاقة عند الهوفر  */
+.quote-card {
+  transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.quote-card:hover {
+  transform: scale(1.06);
+  background-color: #fdf8ef;
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 20px rgba(0,0,0,.15);
+}

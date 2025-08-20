@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>قدواتنا — Qudwatuna</title>
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/output.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
+  </head>
+
+  <body class="font-primary bg-white text-gray-800">
+    <!-- ====================== Header ====================== -->
+       <header>
+      <nav
+        class="bg-white/80 backdrop-blur shadow-md fixed top-0 left-0 right-0 z-50"
+      >
+        <div
+          class="container mx-auto px-4 py-3 flex items-center justify-between"
+        >
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-3">
+            <img
+              src="./src/img/logo-Qudwatuna.png"
+              alt="شعار قدوتنا"
+              class="h-10"
+            />
+            <span class="sr-only">الانتقال إلى الرئيسية</span>
+          </a>
+
+          <!-- زر القائمة (موبايل) -->
+          <button
+            id="menuToggle"
+            class="md:hidden inline-flex items-center justify-center"
+            aria-label="فتح القائمة"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars text-3xl text-[#B5964D]"></i>
+          </button>
+
+          <!-- القائمة (ديسكتوب) -->
+          <ul
+            id="mainMenu"
+            class="hidden md:flex gap-8 items-center text-sm font-medium"
+          >
+            <li>
+              <a
+                class="flex items-center gap-2 text-gray-700 hover:text-[#B5964D] transition-colors"
+                href="index.html"
+              >
+                <i class="fa-solid fa-house"></i>
+                <span>الرئيسية</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center gap-2 text-gray-700 hover:text-[#B5964D] transition-colors"
+                href="stories.html"
+              >
+                <i class="fa-solid fa-users"></i>
+                <span>قدواتنا</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center gap-2 text-gray-700 hover:text-[#B5964D] transition-colors"
+                href="quotes.html"
+              >
+                <i class="fa-solid fa-quote-left"></i>
+                <span>حِكم</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center gap-2 text-gray-700 hover:text-[#B5964D] transition-colors"
+                href="#info"
+              >
+                <i class="fa-solid fa-circle-info"></i>
+                <span>معلومات</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- قائمة الموبايل  -->
+        <div
+          id="mobileMenu"
+          class="md:hidden hidden border-t bg-white/95 backdrop-blur"
+        >
+          <ul class="px-4 py-3 space-y-2">
+            <li>
+              <a
+                class="flex items-center gap-2 py-2 text-gray-700 hover:text-[#B5964D] transition-colors"
+                href="index.html"
+              >
+                <i class="fa-solid fa-house"></i>
+                <span>الرئيسية</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center gap-2 py-2 text-gray-700 hover:text-[#B5964D] transition-colors"
+                href="stories.html"
+              >
+                <i class="fa-solid fa-users"></i>
+                <span>قدواتنا</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center gap-2 py-2 text-gray-700 hover:text-[#B5964D] transition-colors"
+                href="quotes.html"
+              >
+                <i class="fa-solid fa-quote-left"></i>
+                <span>حِكم</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center gap-2 py-2 text-gray-700 hover:text-[#B5964D] transition-colors"
+                href="#info"
+              >
+                <i class="fa-solid fa-circle-info"></i>
+                <span>معلومات</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="h-16" aria-hidden="true"></div>
+
+    <!-- ====================== المحتوى ====================== -->
+    <main class="bg-gradient-to-b from-black to-[#1a1a1a] min-h-screen">
+      <section class="bg-[#111] border-b border-black/30">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+          <!-- التراجع للقبل -->
+          <nav
+            class="flex flex-wrap items-center gap-3 text-sm text-gray-300 mb-4"
+            aria-label="breadcrumb"
+          >
+            <a href="index.html" class="hover:text-[#B5964D]">الرئيسية</a>
+            <span class="text-gray-500">/</span>
+            <span class="text-white font-semibold">قدواتنا</span>
+          </nav>
+          <!-- شريط البحث والتصنيف -->
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-4"
+          >
+            <!-- التصنيف -->
+            <div class="flex items-center gap-2 w-full md:w-auto">
+              <label for="groupFilter" class="text-white font-semibold"
+                >التصنيف:</label
+              >
+              <select
+                id="groupFilter"
+                class="rounded-md bg-white/95 text-black border px-3 py-2 text-sm focus:ring-2 focus:ring-[#B5964D]"
+              >
+                <option value="all">الكل</option>
+                <option value="sahaba">الصحابة</option>
+                <option value="tabiun">التابعون</option>
+                <option value="leaders">القادة</option>
+              </select>
+            </div>
+
+            <!-- البحث -->
+            <div class="flex items-center w-full md:w-1/2">
+              <input
+                id="storiesSearch"
+                type="text"
+                placeholder="ابحث بالاسم أو العبارة"
+                class="flex-grow rounded-s-lg bg-white text-black border px-3 py-2 text-sm focus:ring-2 focus:ring-[#B5964D]"
+              />
+              <button
+                id="storiesSearchBtn"
+                class="bg-[#B5964D] text-white px-4 py-2 rounded-e-lg hover:brightness-110 active:scale-95 transition"
+              >
+                ابحث
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  قدواتنا -->
+      <section class="bg-gradient-to-b from-[#111] to-[#1b1b1b]">
+        <div class="max-w-6xl mx-auto px-4 pb-12">
+          <div
+            id="storiesGrid"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-6"
+          >
+            <!-- البطاقة 1 -->
+            <a
+              href="story.html?id=omar"
+              class="block rounded-xl overflow-hidden bg-white shadow-lg"
+              data-group="sahaba"
+              data-title="عمر بن الخطاب"
+              data-text="حاسبوا أنفسكم"
+              data-aos="zoom-in"
+            >
+              <img
+                src="src/img/16.jpg"
+                alt="عمر بن الخطاب"
+                class="w-full h-[240px] object-cover"
+              />
+              <div class="p-4 text-black">
+                <h3 class="font-bold text-lg">عمر بن الخطاب</h3>
+                <p class="text-sm text-gray-600 mt-2">
+                  "حاسبوا أنفسكم قبل أن تحاسبوا..."
+                </p>
+              </div>
+            </a>
+
+            <!-- البطاقة 2 -->
+            <a
+              href="story.html?id=ali"
+              class="block rounded-xl overflow-hidden bg-white shadow-lg"
+              data-group="sahaba"
+              data-title="علي بن أبي طالب"
+              data-text="العلم خير من المال"
+              data-aos="zoom-in"
+              data-aos-delay="50"
+            >
+              <img
+                src="src/img/1.jpg"
+                alt="علي بن أبي طالب"
+                class="w-full h-[240px] object-cover"
+              />
+              <div class="p-4 text-black">
+                <h3 class="font-bold text-lg">علي بن أبي طالب</h3>
+                <p class="text-sm text-gray-600 mt-2">
+                  "العلم خير من المال..."
+                </p>
+              </div>
+            </a>
+
+            <!-- البطاقة 3 -->
+            <a
+              href="story.html?id=uthman"
+              class="block rounded-xl overflow-hidden bg-white shadow-lg"
+              data-group="sahaba"
+              data-title="عثمان بن عفان"
+              data-text="الحياء خير كله"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <img
+                src="src/img/3.jpg"
+                alt="عثمان بن عفان"
+                class="w-full h-[240px] object-cover"
+              />
+              <div class="p-4 text-black">
+                <h3 class="font-bold text-lg">عثمان بن عفان</h3>
+                <p class="text-sm text-gray-600 mt-2">"الحياء خير كله..."</p>
+              </div>
+            </a>
+
+            <!-- البطاقة 4 -->
+            <a
+              href="story.html?id=saad"
+              class="block rounded-xl overflow-hidden bg-white shadow-lg"
+              data-group="sahaba"
+              data-title="سعد بن معاذ"
+              data-text="قوموا إلى سيدكم"
+              data-aos="zoom-in"
+            >
+              <img
+                src="src/img/5.jpg"
+                alt="سعد بن معاذ"
+                class="w-full h-[240px] object-cover"
+              />
+              <div class="p-4 text-black">
+                <h3 class="font-bold text-lg">سعد بن معاذ</h3>
+                <p class="text-sm text-gray-600 mt-2">"قوموا إلى سيدكم..."</p>
+              </div>
+            </a>
+
+            <!-- البطاقة 5 -->
+            <a
+              href="story.html?id=salah"
+              class="block rounded-xl overflow-hidden bg-white shadow-lg"
+              data-group="leaders"
+              data-title="صلاح الدين الأيوبي"
+              data-text="لا أنام وفي المسلمين مظلمة"
+              data-aos="zoom-in"
+              data-aos-delay="50"
+            >
+              <img
+                src="src/img/s.jpg"
+                alt="صلاح الدين الأيوبي"
+                class="w-full h-[240px] object-cover"
+              />
+              <div class="p-4 text-black">
+                <h3 class="font-bold text-lg">صلاح الدين الأيوبي</h3>
+                <p class="text-sm text-gray-600 mt-2">
+                  "لا أنام وفي المسلمين مظلمة."
+                </p>
+              </div>
+            </a>
+
+            <!-- البطاقة 6 -->
+            <a
+              href="story.html?id=khalid"
+              class="block rounded-xl overflow-hidden bg-white shadow-lg"
+              data-group="leaders"
+              data-title="خالد بن الوليد"
+              data-text="سيف الله المسلول"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <img
+                src="src/img/kh.jpg"
+                alt="خالد بن الوليد"
+                class="w-full h-[240px] object-cover"
+              />
+              <div class="p-4 text-black">
+                <h3 class="font-bold text-lg">خالد بن الوليد</h3>
+                <p class="text-sm text-gray-600 mt-2">"سيف الله المسلول."</p>
+              </div>
+            </a>
+
+            <!-- البطاقة 7 -->
+            <a
+              href="story.html?id=abubakr"
+              class="block rounded-xl overflow-hidden bg-white shadow-lg"
+              data-group="sahaba"
+              data-title="أبو بكر الصديق"
+              data-text="خلافة راشدة"
+              data-aos="zoom-in"
+            >
+              <img
+                src="src/img/a.jpg"
+                alt="أبو بكر الصديق"
+                class="w-full h-[240px] object-cover"
+              />
+              <div class="p-4 text-black">
+                <h3 class="font-bold text-lg">أبو بكر الصديق</h3>
+                <p class="text-sm text-gray-600 mt-2">
+                  "إن أقواكم عندي الضعيف حتى آخذ له الحق."
+                </p>
+              </div>
+            </a>
+
+            <!-- البطاقة 8 -->
+            <a
+              href="story.html?id=zubair"
+              class="block rounded-xl overflow-hidden bg-white shadow-lg"
+              data-group="sahaba"
+              data-title="الزبير بن العوام"
+              data-text="حواري الرسول"
+              data-aos="zoom-in"
+              data-aos-delay="50"
+            >
+              <img
+                src="src/img/2.jpg"
+                alt="الزبير بن العوام"
+                class="w-full h-[240px] object-cover"
+              />
+              <div class="p-4 text-black">
+                <h3 class="font-bold text-lg">الزبير بن العوام</h3>
+                <p class="text-sm text-gray-600 mt-2">"حواري الرسول."</p>
+              </div>
+            </a>
+
+            <!-- البطاقة 9 -->
+            <a
+              href="story.html?id=abu-ubaidah"
+              class="block rounded-xl overflow-hidden bg-white shadow-lg"
+              data-group="sahaba"
+              data-title="أبو عبيدة بن الجراح"
+              data-text="أمين هذه الأمة"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <img
+                src="src/img/6.jpg"
+                alt="أبو عبيدة بن الجراح"
+                class="w-full h-[240px] object-cover"
+              />
+              <div class="p-4 text-black">
+                <h3 class="font-bold text-lg">أبو عبيدة بن الجراح</h3>
+                <p class="text-sm text-gray-600 mt-2">"أمين هذه الأمة."</p>
+              </div>
+            </a>
+
+            <!-- البطاقة 10 -->
+            <a
+              href="story.html?id=hasan-basri"
+              class="block rounded-xl overflow-hidden bg-white shadow-lg"
+              data-group="tabiun"
+              data-title="الحسن البصري"
+              data-text="إنما العلم بالتعلم"
+              data-aos="zoom-in"
+              data-aos-delay="50"
+            >
+              <img
+                src="src/img/f.jpg"
+                alt="الحسن البصري"
+                class="w-full h-[240px] object-cover"
+              />
+              <div class="p-4 text-black">
+                <h3 class="font-bold text-lg">الحسن البصري</h3>
+                <p class="text-sm text-gray-600 mt-2">"إنما العلم بالتعلم."</p>
+              </div>
+            </a>
+
+            <!-- البطاقة 11 -->
+            <a
+              href="story.html?id=imam-nawawi"
+              class="block rounded-xl overflow-hidden bg-white shadow-lg"
+              data-group="leaders"
+              data-title="الإمام النووي"
+              data-text="رياض الصالحين"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <img
+                src="src/img/n.png"
+                alt="الإمام النووي"
+                class="w-full h-[240px] object-cover"
+              />
+              <div class="p-4 text-black">
+                <h3 class="font-bold text-lg">الإمام النووي</h3>
+                <p class="text-sm text-gray-600 mt-2">"صاحب رياض الصالحين."</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- لا نتائج + live region + باجنيشن -->
+          <p id="storiesEmpty" class="hidden text-center text-gray-400 mt-6">
+            لا توجد نتائج مطابقة.
+          </p>
+          <div
+            id="storiesLive"
+            class="sr-only"
+            role="status"
+            aria-live="polite"
+          ></div>
+          <nav
+            id="storiesPagination"
+            class="flex justify-center items-center gap-2 mt-8"
+            aria-label="ترقيم الصفحات"
+          ></nav>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====================== Footer ====================== -->
+    <footer class="bg-[#0C0C0C] text-white mt-10">
+      <div
+        class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10"
+      >
+        <div class="space-y-4 text-center md:text-start">
+          <img
+            src="./src/img/logo-Qudwatuna.png"
+            alt="شعار قدوتنا"
+            class="h-12 mx-auto md:mx-0"
+            loading="lazy"
+          />
+          <h3 class="font-bold text-xl tracking-wide">Qudwatuna</h3>
+          <p
+            class="text-gray-400 text-sm leading-relaxed max-w-md mx-auto md:mx-0"
+          >
+            “منصة قُدوتنا تنقل سير وأفكار القادة والصحابة والتابعين؛ لنستلهم
+            منهم العزم والإيمان ونبني مستقبلنا.”
+          </p>
+          <div class="flex justify-center md:justify-start gap-4 pt-2 text-xl">
+            <a href="#" class="hover:text-[#B5964D]" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-[#B5964D]" aria-label="X"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-[#B5964D]" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="space-y-3 text-center md:text-start">
+          <h4 class="font-bold text-lg mb-2">روابط سريعة</h4>
+          <ul
+            class="grid grid-cols-2 md:block gap-x-6 gap-y-2 text-gray-400 text-sm"
+          >
+            <li>
+              <a href="index.html" class="hover:text-[#B5964D]">الرئيسية</a>
+            </li>
+            <li>
+              <a href="stories.html" class="text-white hover:text-[#B5964D]"
+                >قدواتنا</a
+              >
+            </li>
+            <li><a href="quotes.html" class="hover:text-[#B5964D]">حِكم</a></li>
+            <li>
+              <a href="index.html#info" class="hover:text-[#B5964D]">معلومات</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="space-y-3 text-center md:text-start">
+          <h4 class="font-bold text-lg mb-2">تواصل معنا</h4>
+          <ul class="space-y-3 text-gray-400 text-sm max-w-sm mx-auto md:mx-0">
+            <li class="flex items-center justify-center md:justify-start gap-2">
+              <i class="fa-solid fa-envelope text-[#B5964D]"></i>
+              <a href="mailto:info@qudwatuna.com" class="hover:text-[#B5964D]"
+                >info@qudwatuna.com</a
+              >
+            </li>
+            <li class="flex items-center justify-center md:justify-start gap-2">
+              <i class="fa-solid fa-phone text-[#B5964D]"></i>
+              <a href="tel:+967000000000" class="hover:text-[#B5964D]"
+                >+967 000 000 000</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- زر الصعود -->
+      <button
+        id="scrollTopBtn"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="fixed bottom-5 left-5 w-10 h-10 rounded-full bg-[#B5964D] text-white shadow-lg flex items-center justify-center transition duration-300 opacity-0 pointer-events-none translate-y-4 hover:brightness-110 active:scale-95"
+        aria-label="العودة للأعلى"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+
+      <div class="text-center py-4 text-gray-500 text-sm">
+        © 2025 <span class="font-semibold">Qudwatuna</span>. جميع الحقوق محفوظة.
+      </div>
+    </footer>
+
+    <!-- ====================== Scripts ====================== -->
+    <!-- AOS -->
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <!-- سكربتات  -->
+    <script src="./src/js/script.js"></script>
+
+    <!-- سكربت خاص بقدواتنا:  فلترة + بحث + باجنيشن + زر صعود -->
+    <script>
+         (function () {
+        const btn = document.getElementById("scrollTopBtn");
+        if (!btn) return;
+        const show = () =>
+          btn.classList.remove(
+            "opacity-0",
+            "pointer-events-none",
+            "translate-y-4"
+          );
+        const hide = () =>
+          btn.classList.add(
+            "opacity-0",
+            "pointer-events-none",
+            "translate-y-4"
+          );
+        const onScroll = () => (window.scrollY > 120 ? show() : hide());
+        hide();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("load", onScroll);
+      })();
+
+      // فلترة + بحث + باجنيشن
+      (function () {
+        const grid = document.getElementById("storiesGrid");
+        const filterEl = document.getElementById("groupFilter");
+        const searchEl = document.getElementById("storiesSearch");
+        const searchBtn = document.getElementById("storiesSearchBtn");
+        const pagination = document.getElementById("storiesPagination");
+        const emptyMsg = document.getElementById("storiesEmpty");
+        const live = document.getElementById("storiesLive");
+        if (!grid) return;
+
+        const cards = Array.from(grid.children);
+        let state = { group: "all", q: "", page: 1, perPage: getPerPage() };
+
+        function getPerPage() {
+          const w = window.innerWidth;
+          if (w >= 1024) return 9; // 3×3
+          if (w >= 640) return 6; // 2×3
+          return 6; // 1×6
+        }
+
+        function filtered() {
+          const q = state.q.trim().toLowerCase();
+          return cards.filter((c) => {
+            const g = (c.getAttribute("data-group") || "").toLowerCase();
+            const title = (c.getAttribute("data-title") || "").toLowerCase();
+            const text = (c.getAttribute("data-text") || "").toLowerCase();
+            const gOk = state.group === "all" || g === state.group;
+            const qOk = !q || title.includes(q) || text.includes(q);
+            return gOk && qOk;
+          });
+        }
+
+        function render() {
+          const list = filtered();
+          const total = list.length;
+          const pages = Math.max(1, Math.ceil(total / state.perPage));
+          if (state.page > pages) state.page = pages;
+
+          // أخفِ جميع البطاقات
+          cards.forEach((c) => c.classList.add("hidden"));
+
+          if (total === 0) {
+            emptyMsg.classList.remove("hidden");
+            pagination.innerHTML = "";
+            if (live) live.textContent = "لا توجد نتائج.";
+            return;
+          } else {
+            emptyMsg.classList.add("hidden");
+          }
+
+          // اعرض شريحة الصفحة
+          const start = (state.page - 1) * state.perPage;
+          list
+            .slice(start, start + state.perPage)
+            .forEach((c) => c.classList.remove("hidden"));
+
+          // بنِا الباجنيشن
+          buildPagination(pages);
+
+          // live region
+          if (live) {
+            const firstIndex = start + 1;
+            const lastIndex = Math.min(start + state.perPage, total);
+            live.textContent = `عرض ${firstIndex}–${lastIndex} من ${total}. صفحة ${state.page}/${pages}.`;
+          }
+        }
+
+        function buildPagination(pages) {
+          pagination.innerHTML = "";
+          const makeBtn = (label, onClick, classes, disabled = false) => {
+            const b = document.createElement("button");
+            b.type = "button";
+            b.textContent = label;
+            b.className = classes;
+            if (disabled) {
+              b.disabled = true;
+              b.classList.add("opacity-50", "cursor-not-allowed");
+            } else b.addEventListener("click", onClick);
+            return b;
+          };
+          const base =
+            "px-3 sm:px-4 py-2 rounded-md bg-gray-800 text-gray-300 hover:bg-[#B5964D] hover:text-white transition";
+          const num =
+            "w-9 h-9 sm:w-10 sm:h-10 rounded-md transition font-semibold";
+
+          // السابق
+          pagination.appendChild(
+            makeBtn(
+              "السابق",
+              () => {
+                state.page--;
+                render();
+                grid.scrollIntoView({ behavior: "smooth", block: "start" });
+              },
+              base,
+              state.page === 1
+            )
+          );
+
+          // نافذة أرقام
+          const win = 5;
+          let s = Math.max(1, state.page - Math.floor(win / 2));
+          let e = Math.min(pages, s + win - 1);
+          if (e - s + 1 < win) s = Math.max(1, e - win + 1);
+
+          for (let i = s; i <= e; i++) {
+            const active = i === state.page;
+            pagination.appendChild(
+              makeBtn(
+                String(i),
+                () => {
+                  state.page = i;
+                  render();
+                  grid.scrollIntoView({ behavior: "smooth", block: "start" });
+                },
+                active
+                  ? `${num} bg-[#B5964D] text-white`
+                  : `${num} bg-gray-700 text-white hover:bg-[#B5964D]`
+              )
+            );
+          }
+
+          // التالي
+          pagination.appendChild(
+            makeBtn(
+              "التالي",
+              () => {
+                state.page++;
+                render();
+                grid.scrollIntoView({ behavior: "smooth", block: "start" });
+              },
+              base,
+              state.page === pages
+            )
+          );
+        }
+
+        // Events
+        filterEl.addEventListener("change", () => {
+          state.group = filterEl.value;
+          state.page = 1;
+          render();
+        });
+        let t;
+        const doSearch = () => {
+          state.q = searchEl.value;
+          state.page = 1;
+          render();
+        };
+        searchEl.addEventListener("input", () => {
+          clearTimeout(t);
+          t = setTimeout(doSearch, 300);
+        });
+        searchBtn.addEventListener("click", doSearch);
+
+        // إعادة حساب perPage عند تغيير العرض
+        window.addEventListener("resize", () => {
+          const n = getPerPage();
+          if (n !== state.perPage) {
+            state.perPage = n;
+            state.page = 1;
+            render();
+          }
+        });
+
+        // بدء
+        render();
+      })();
+    </script>
+  </body>
+</html>

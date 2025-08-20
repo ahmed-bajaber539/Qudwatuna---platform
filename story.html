@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>قصة — Qudwatuna</title>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="stylesheet" href="./src/css/output.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
+</head>
+<body class="font-primary bg-white text-gray-800">
+  <!-- Header  -->
+  <header>
+    <nav class="bg-white/80 backdrop-blur shadow-md fixed top-0 left-0 right-0 z-50">
+      <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3" aria-label="الانتقال إلى الرئيسية">
+          <img src="./src/img/logo-Qudwatuna.png" alt="شعار قدوتنا" class="h-10" />
+          <span class="sr-only">Qudwatuna</span>
+        </a>
+        <button id="menuToggle" class="md:hidden inline-flex items-center justify-center"
+                aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobileMenu">
+          <i class="fa-solid fa-bars text-3xl text-[#B5964D]"></i>
+        </button>
+        <ul id="mainMenu" class="hidden md:flex gap-8 items-center text-sm font-medium">
+          <li><a class="flex items-center gap-2 text-gray-700 hover:text-[#B5964D]" href="index.html"><i class="fa-solid fa-house"></i><span>الرئيسية</span></a></li>
+          <li><a class="flex items-center gap-2 text-white bg-[#B5964D] px-3 py-1 rounded-full" href="stories.html"><i class="fa-solid fa-users"></i><span>قدواتنا</span></a></li>
+          <li><a class="flex items-center gap-2 text-gray-700 hover:text-[#B5964D]" href="quotes.html"><i class="fa-solid fa-quote-left"></i><span>حِكم</span></a></li>
+          <li><a class="flex items-center gap-2 text-gray-700 hover:text-[#B5964D]" href="index.html#info"><i class="fa-solid fa-circle-info"></i><span>معلومات</span></a></li>
+          <li><a class="flex items-center gap-2 text-gray-700 hover:text-[#B5964D]" href="index.html#contact"><i class="fa-solid fa-envelope"></i><span>تواصل</span></a></li>
+        </ul>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden border-top bg-white/95 backdrop-blur">
+        <ul class="px-4 py-3 space-y-2">
+          <li><a class="flex items-center gap-2 py-2 text-gray-700 hover:text-[#B5964D]" href="index.html"><i class="fa-solid fa-house"></i><span>الرئيسية</span></a></li>
+          <li><a class="flex items-center gap-2 py-2 text-white bg-[#B5964D] rounded-lg px-3" href="stories.html"><i class="fa-solid fa-users"></i><span>قدواتنا</span></a></li>
+          <li><a class="flex items-center gap-2 py-2 text-gray-700 hover:text-[#B5964D]" href="quotes.html"><i class="fa-solid fa-quote-left"></i><span>حِكم</span></a></li>
+          <li><a class="flex items-center gap-2 py-2 text-gray-700 hover:text-[#B5964D]" href="index.html#info"><i class="fa-solid fa-circle-info"></i><span>معلومات</span></a></li>
+          <li><a class="flex items-center gap-2 py-2 text-gray-700 hover:text-[#B5964D]" href="index.html#contact"><i class="fa-solid fa-envelope"></i><span>تواصل</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="h-16" aria-hidden="true"></div>
+
+  <!-- ====================== التفاصيل ====================== -->
+  <main>
+    <!-- هيرو  -->
+    <section class="relative overflow-hidden bg-[#0C0C0C]">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0C0C0C] to-[#1a1a1a]"></div>
+      <div class="relative max-w-6xl mx-auto px-4 py-10 md:py-14">
+        <nav class="flex flex-wrap items-center gap-3 text-sm text-gray-300 mb-3" aria-label="breadcrumb">
+          <a href="index.html" class="hover:text-[#B5964D]">الرئيسية</a>
+          <span class="text-gray-500">/</span>
+          <a href="stories.html" class="hover:text-[#B5964D]">قدواتنا</a>
+          <span class="text-gray-500">/</span>
+          <span id="bcTitle" class="text-white font-semibold">…</span>
+        </nav>
+        <h1 id="storyTitle" class="text-white text-3xl md:text-4xl font-extrabold tracking-wide" data-aos="fade-up">…</h1>
+        <p id="storyIntro" class="text-gray-300 mt-3" data-aos="fade-up" data-aos-delay="100">…</p>
+      </div>
+    </section>
+
+    <!-- المحتوى -->
+    <section class="bg-[#111]">
+      <div class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- الصورة -->
+        <div class="md:col-span-1" data-aos="zoom-in">
+          <img id="storyImage" src="" alt="" class="w-full rounded-xl shadow-lg object-cover max-h-[420px]" />
+          <div id="storyEra" class="mt-3 inline-flex items-center gap-2 text-sm text-gray-300">
+            <i class="fa-solid fa-clock text-[#B5964D]"></i><span>…</span>
+          </div>
+          <blockquote id="storyQuote" class="mt-4 p-4 rounded-lg bg-white/5 text-gray-200 border border-white/10">…</blockquote>
+        </div>
+
+        <!-- النص -->
+        <article id="storyContent" class="md:col-span-2 prose prose-invert max-w-none leading-relaxed text-white" data-aos="fade-left">
+        </article>
+      </div>
+    </section>
+
+    <!-- روابط تنقل -->
+    <section class="bg-[#111] pb-10">
+      <div class="max-w-6xl mx-auto px-4">
+        <a href="stories.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#B5964D] text-white hover:brightness-110 active:scale-95 transition">
+          <i class="fa-solid fa-arrow-right"></i> العودة إلى قدواتنا
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer  -->
+  <footer class="bg-[#0C0C0C] text-white">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-center text-gray-500 text-sm">
+      © 2025 <span class="font-semibold">Qudwatuna</span>. جميع الحقوق محفوظة.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./node_modules/aos/dist/aos.js"></script>
+  <script src="./src/js/stories.js"></script>
+  <script src="./src/js/script.js"></script>
+
+  <!-- سكربت  القصة -->
+  <script>
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id');
+
+    const data = window.STORIES || {};
+    const story = data[id];
+
+    const $ = s => document.querySelector(s);
+
+    if (!story) {
+      // 404 بسيط
+      $('#bcTitle').textContent = 'غير موجود';
+      $('#storyTitle').textContent = 'القصة غير موجودة';
+      $('#storyIntro').textContent = 'نأسف، لم نعثر على القصة المطلوبة.';
+      $('#storyImage').style.display = 'none';
+      $('#storyEra').style.display = 'none';
+      $('#storyQuote').style.display = 'none';
+    } else {
+      $('#bcTitle').textContent = story.title;
+      $('#storyTitle').textContent = story.title;
+      $('#storyIntro').textContent = story.intro || '';
+      const img = $('#storyImage');
+      img.src = story.image;
+      img.alt = story.title;
+      $('#storyEra span').textContent = story.era || 'غير محدد';
+      $('#storyQuote').textContent = story.quote || '';
+      $('#storyContent').innerHTML = story.contentHtml || '';
+      document.title = story.title + ' — Qudwatuna';
+    }
+  </script>
+</body>
+</html>
