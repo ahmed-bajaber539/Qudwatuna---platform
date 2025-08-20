@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Qudwatuna</title>
+    <title>Qudwatuna-قدواتنا</title>
 
-    <!-- CSS الأساسية الخاصة بك -->
+    <!-- CSS الأساسية  -->
     <link rel="stylesheet" href="./src/css/style.css" />
     <link rel="stylesheet" href="./src/css/output.css" />
 
-    <!-- Swiper (نسخة واحدة فقط) -->
+    <!-- Swiper  -->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper@11/swiper-bundle.min.css"
+      href="./node_modules/swiper/swiper-bundle.min.css"
     />
 
-    <!-- Font Awesome (إصدار صحيح) -->
+    <!-- Font Awesome  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -149,7 +149,7 @@
     </header>
 
     <main class="m-0 p-0">
-      <!-- Spacer للـ fixed nav -->
+      <!-- Spacer للـ nav -->
       <div class="h-16"></div>
 
       <!-- ====================== Hero ====================== -->
@@ -157,6 +157,7 @@
         id="hero"
         class="relative w-full overflow-hidden bg-[#0C0C0C] h-[calc(100vh-64px)] md:h-[calc(100vh-80px)]"
       >
+        <!--  الدائرة الخلفية -->
         <div
           aria-hidden="true"
           class="pointer-events-none absolute -bottom-10 left-1/2 -translate-x-1/2 w-[460px] h-[460px] rounded-full bg-[#B5964D]/35 blur-3xl md:bottom-0 md:left-auto md:right-16 md:translate-x-0 md:w-[600px] md:h-[600px]"
@@ -168,7 +169,7 @@
           >
             <div
               class="w-full md:w-1/2 text-white text-center md:text-start translate-y-30 z-10"
-              data-aos="fade-right"
+              data-aos="fade-down"
               data-aos-duration="800"
             >
               <h1
@@ -187,13 +188,13 @@
 
             <div
               class="order-2 md:order-1 w-full md:w-[58%] flex justify-center md:justify-end z-0"
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-delay="120"
               data-aos-duration="800"
             >
               <img
                 src="./src/img/pic-01.png"
-                alt="محارب من الماضي"
+                alt="محارب "
                 class="object-contain select-none drop-shadow-2xl transform-gpu w-full max-w-[800px] sm:max-w-[680px] md:max-w-[1000px] lg:max-w-[1150px] max-h-[80vh] sm:max-h-[70vh] md:max-h-[90vh] lg:max-h-[100vh] scale-125 sm:scale-100 md:scale-400 lg:scale-125 translate-y-55 sm:translate-y-[100px] md:translate-y-[200px] lg:translate-y-[160px]"
               />
             </div>
@@ -263,7 +264,7 @@
 
              
 
-              <!-- شريحة 5 -->
+              <!-- شريحة 4 -->
               <div class="swiper-slide flex justify-center cursor-pointer ">
                 <article
                   class="relative rounded-2xl bg-white overflow-hidden shadow-[0_12px_24px_rgba(0,0,0,.12)]"
@@ -306,11 +307,11 @@
           </h2>
         </div>
 
-        <!-- الحاوية + قناع تلاشي -->
+        <!-- الحاوية-->
         <div
           class="relative overflow-hidden rounded-2xl bg-[#F2F2F0] py-6 marquee-mask"
         >
-          <!-- المسار المتحرك (Loop لا نهائي + يتوقف على hover) -->
+          <!-- المسار المتحرك  -->
           <div class="marquee-track will-change-transform">
             <!-- المجموعة A -->
             <div class="flex gap-4">
@@ -326,7 +327,7 @@
                   >عمر بن الخطاب رضي الله عنه</span
                 >
 
-                <!-- زر النسخ (دائري - أسفل يمين) -->
+                <!-- (زر النسخ) -->
                 <button
                   type="button"
                   onclick="copyQuote(this)"
@@ -398,9 +399,8 @@
               </article>
             </div>
 
-            <!-- المجموعة B (مكررة 1:1 لضمان السلاسة) -->
+            <!-- المجموعة B  -->
             <div class="flex gap-4">
-              <!-- نفس الأربع بطاقات بالضبط -->
               <article
                 class="quote-card group relative w-80 shrink-0 p-6 rounded-xl bg-white shadow-md border border-gray-200 text-center"
               >
@@ -496,7 +496,7 @@
         <!-- جسم السكشن -->
         <div class="bg-[#F2F2F0] px-4 sm:px-8 py-8">
           <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-            <!-- الصورة (مخفية في الموبايل، صغيرة في الكمبيوتر) -->
+            <!-- الصورة  -->
             <div
               class="hidden md:flex justify-center"
               data-aos="zoom-in"
@@ -510,7 +510,7 @@
               />
             </div>
 
-            <!-- الصندوق النصي -->
+            <!-- النص -->
             <div data-aos="fade-up">
               <div
                 class="bg-[#F2E9E1] rounded-2xl p-6 md:p-7 border border-[#E7D6C3] shadow-[0_8px_16px_rgba(0,0,0,.08)]"
@@ -523,10 +523,10 @@
                   وطمأنينة.”
                 </p>
 
-                <!-- الزر مع هوفر -->
+                <!--الزر -->
                 <a
                   href="#qudwatuna"
-                  class="inline-flex items-center justify-center rounded-lg mt-6 bg-white text-[#B5964D] border border-[#B5964D] px-6 py-2 font-semibold shadow transition duration-300 hover:bg-[#B5964D] hover:text-white hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B5964D] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F2E9E1] active:scale-95"
+                  class="inline-flex items-center justify-center rounded-lg mt-6 bg-white text-[#B5964D] border border-[#B5964D] px-6 py-2 font-semibold shadow transition duration-300 hover:bg-[#B5964D] hover:text-white hover:shadow-lg "
                 >
                   اكتشف الآن
                 </a>
@@ -541,7 +541,7 @@
       <div
         class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10"
       >
-        <!-- العمود 1: الشعار + وصف -->
+        <!-- الشعار-->
         <div class="space-y-4 text-center md:text-start" data-aos="fade-up">
           <img
             src="./src/img/logo-Qudwatuna.png"
@@ -557,7 +557,7 @@
             منهم العزم والإيمان ونبني مستقبلنا بثقة وطمأنينة.”
           </p>
 
-          <!-- أيقونات السوشال (تكون هنا في الموبايل أسفل الشعار) -->
+          <!-- أيقونات السوشال  -->
           <div class="flex justify-center md:justify-start gap-4 pt-2 text-xl">
             <a
               href="#"
@@ -586,7 +586,7 @@
           </div>
         </div>
 
-        <!-- العمود 2: روابط سريعة -->
+        <!-- الاقسام  -->
         <div
           class="space-y-3 text-center md:text-start"
           data-aos="fade-up"
@@ -620,7 +620,7 @@
           </ul>
         </div>
 
-        <!-- العمود 3: تواصل معنا -->
+        <!-- تواصل -->
         <div
         id="contact"
           class="space-y-3 text-center md:text-start"
@@ -647,45 +647,19 @@
             </li>
           </ul>
 
-          <!-- سوشال أيضاً هنا في الديسكتوب (اختياري) -->
-          <div class="hidden md:flex gap-4 pt-2 text-xl">
-            <a
-              href="#"
-              target="_blank"
-              class="hover:text-[#B5964D] transition"
-              aria-label="Facebook"
-            >
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              class="hover:text-[#B5964D] transition"
-              aria-label="Instagram"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              class="hover:text-[#B5964D] transition"
-              aria-label="X"
-            >
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-          </div>
+      
         </div>
       </div>
 
-      <!-- خط فاصل للموبايل يعطي ترتيب أنظف -->
-      <div class="md:hidden border-t border-gray-800 mx-4"></div>
+      <!--خط فاصل  -->
+      <div class=" border-t border-gray-800 mx-4"></div>
 
       <!-- حقوق النشر -->
       <div class="text-center py-4 text-gray-500 text-sm">
         © 2025 <span class="font-semibold">Qudwatuna</span>. جميع الحقوق محفوظة.
       </div>
 
-      <!-- زر العودة للأعلى (يظهر/يختفي عبر JS) -->
+      <!-- زر العودة للأعلى  -->
       <button
         id="scrollTopBtn"
         onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
@@ -698,11 +672,11 @@
 
     <!-- ====================== Scripts ====================== -->
     <!-- Swiper -->
-    <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="./node_modules/swiper/swiper-element-bundle.min.js"></script>
     <!-- AOS -->
     <script src="./node_modules/aos/dist/aos.js"></script>
-
-    <!-- سكربتاتك -->
+    <!-- main Script -->
     <script src="./src/js/script.js"></script>
   </body>
 </html>

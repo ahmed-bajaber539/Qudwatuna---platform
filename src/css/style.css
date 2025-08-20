@@ -9,37 +9,29 @@
   --font-secondary: 'Badeen Display', cursive;
 }
 
-/* ===== Marquee keyframes (خارج @theme) ===== */
-@keyframes marquee-ltr {       /* لصفحات LTR: من اليسار → اليمين */
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-@keyframes marquee-rtl {       /* لصفحات RTL: من اليمين → اليسار */
+/* ===== Marquee keyframes  الكارد المتحرك ===== */
+
+@keyframes marquee-rtl {      
   0%   { transform: translateX(0); }
   100% { transform: translateX(50%); }
 }
 
-/* قناع تلاشي لطرفي الشريط (اختياري) */
+/* اختفاء الاطراف في االمتحركه البطائق*/
 .marquee-mask {
   -webkit-mask-image: linear-gradient(to left, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
           mask-image: linear-gradient(to left, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
 }
 
-/* مسار الماركيه: ديناميكي حسب اتجاه الصفحة */
 .marquee-track {
   display: flex;
   width: max-content;
   gap: 1rem;
   animation: marquee-rtl 20s linear infinite;     /* الافتراضي مع صفحات RTL */
 }
-:dir(ltr) .marquee-track {
-  animation: marquee-ltr 20s linear infinite;     /* يتبدل تلقائيًا مع LTR */
-}
-
 /* إيقاف الحركة على الهوفر */
 .marquee-track:hover { animation-play-state: paused; }
 
-/* تأثيرات إضافية للبطاقة (عند الهوفر) في حال أردت استخدامها ككلاسات عامة */
+/*تأثيرات  للبطاقة عند الهوفر  */
 .quote-card {
   transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
