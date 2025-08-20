@@ -12,7 +12,7 @@
     <!-- Swiper  -->
     <link
       rel="stylesheet"
-      href="./node_modules/swiper/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
     <!-- Font Awesome  -->
@@ -25,8 +25,7 @@
     />
 
     <!-- AOS -->
-    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
-  </head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <body class="font-primary bg-white text-black">
     <!-- ====================== Header ====================== -->
@@ -220,11 +219,11 @@
           <div class="swiper" data-aos="fade-up" data-aos-delay="100">
             <div class="swiper-wrapper">
               <!-- شريحة 1 -->
-              <div class="swiper-slide flex justify-center cursor-pointer ">
+              <div class="swiper-slide flex justify-center cursor-pointer">
                 <article
                   class="relative rounded-2xl bg-white overflow-hidden shadow-[0_12px_24px_rgba(0,0,0,.12)]"
-                  data-story-id="ali">
-
+                  data-story-id="ali"
+                >
                   <img
                     class="w-full h-full object-cover"
                     src="./src/img/1.jpg"
@@ -234,12 +233,11 @@
               </div>
 
               <!-- شريحة 2 -->
-              <div class="swiper-slide flex justify-center cursor-pointer ">
+              <div class="swiper-slide flex justify-center cursor-pointer">
                 <article
-                
-                class="relative rounded-2xl bg-white overflow-hidden shadow-[0_12px_24px_rgba(0,0,0,.12)]"
-                data-story-id="zubair">
-                
+                  class="relative rounded-2xl bg-white overflow-hidden shadow-[0_12px_24px_rgba(0,0,0,.12)]"
+                  data-story-id="zubair"
+                >
                   <img
                     class="w-full h-full object-cover"
                     src="./src/img/2.jpg"
@@ -252,8 +250,8 @@
               <div class="swiper-slide flex justify-center cursor-pointer">
                 <article
                   class="relative rounded-2xl bg-white overflow-hidden shadow-[0_12px_24px_rgba(0,0,0,.12)]"
-                  data-story-id="uthman">
-                
+                  data-story-id="uthman"
+                >
                   <img
                     class="w-full h-full object-cover"
                     src="./src/img/3.jpg"
@@ -262,14 +260,12 @@
                 </article>
               </div>
 
-             
-
               <!-- شريحة 4 -->
-              <div class="swiper-slide flex justify-center cursor-pointer ">
+              <div class="swiper-slide flex justify-center cursor-pointer">
                 <article
                   class="relative rounded-2xl bg-white overflow-hidden shadow-[0_12px_24px_rgba(0,0,0,.12)]"
-                  data-story-id="saad">
-                
+                  data-story-id="saad"
+                >
                   <img
                     class="w-full h-full object-cover"
                     src="./src/img/5.jpg"
@@ -526,7 +522,7 @@
                 <!--الزر -->
                 <a
                   href="#qudwatuna"
-                  class="inline-flex items-center justify-center rounded-lg mt-6 bg-white text-[#B5964D] border border-[#B5964D] px-6 py-2 font-semibold shadow transition duration-300 hover:bg-[#B5964D] hover:text-white hover:shadow-lg "
+                  class="inline-flex items-center justify-center rounded-lg mt-6 bg-white text-[#B5964D] border border-[#B5964D] px-6 py-2 font-semibold shadow transition duration-300 hover:bg-[#B5964D] hover:text-white hover:shadow-lg"
                 >
                   اكتشف الآن
                 </a>
@@ -622,7 +618,7 @@
 
         <!-- تواصل -->
         <div
-        id="contact"
+          id="contact"
           class="space-y-3 text-center md:text-start"
           data-aos="fade-up"
           data-aos-delay="200"
@@ -646,13 +642,11 @@
               >
             </li>
           </ul>
-
-      
         </div>
       </div>
 
       <!--خط فاصل  -->
-      <div class=" border-t border-gray-800 mx-4"></div>
+      <div class="border-t border-gray-800 mx-4"></div>
 
       <!-- حقوق النشر -->
       <div class="text-center py-4 text-gray-500 text-sm">
@@ -672,10 +666,12 @@
 
     <!-- ====================== Scripts ====================== -->
     <!-- Swiper -->
-    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
-    <script src="./node_modules/swiper/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module">
+      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+    </script>
     <!-- AOS -->
-    <script src="./node_modules/aos/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- main Script -->
     <script src="./src/js/script.js"></script>
   </body>

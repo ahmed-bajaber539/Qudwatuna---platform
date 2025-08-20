@@ -16,7 +16,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- AOS -->
-  <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="font-primary bg-white text-gray-800">
   <!-- Header  -->
@@ -107,8 +107,11 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="./node_modules/aos/dist/aos.js"></script>
-  <script src="./src/js/stories.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS?.init?.({ duration: 700, once: true });
+</script>
+<script src="./src/js/stories.js"></script>
   <script src="./src/js/script.js"></script>
 
   <!-- سكربت  القصة -->
