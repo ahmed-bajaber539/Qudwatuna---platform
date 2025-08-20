@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>قصة — Qudwatuna</title>
 
-  <!-- CSS مشروعك -->
+  <!-- CSS  -->
   <link rel="stylesheet" href="./src/css/style.css" />
   <link rel="stylesheet" href="./src/css/output.css" />
 
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
 </head>
 <body class="font-primary bg-white text-gray-800">
-  <!-- Header (نفس هيدر موقعك) -->
+  <!-- Header  -->
   <header>
     <nav class="bg-white/80 backdrop-blur shadow-md fixed top-0 left-0 right-0 z-50">
       <div class="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -51,12 +51,11 @@
     </nav>
   </header>
 
-  <!-- Spacer للهيدر الثابت -->
   <div class="h-16" aria-hidden="true"></div>
 
   <!-- ====================== التفاصيل ====================== -->
   <main>
-    <!-- هيرو صغير -->
+    <!-- هيرو  -->
     <section class="relative overflow-hidden bg-[#0C0C0C]">
       <div class="absolute inset-0 bg-gradient-to-b from-[#0C0C0C] to-[#1a1a1a]"></div>
       <div class="relative max-w-6xl mx-auto px-4 py-10 md:py-14">
@@ -86,7 +85,6 @@
 
         <!-- النص -->
         <article id="storyContent" class="md:col-span-2 prose prose-invert max-w-none leading-relaxed text-white" data-aos="fade-left">
-          <!-- سيتم حقن القصة هنا -->
         </article>
       </div>
     </section>
@@ -101,7 +99,7 @@
     </section>
   </main>
 
-  <!-- Footer (نفسه) -->
+  <!-- Footer  -->
   <footer class="bg-[#0C0C0C] text-white">
     <div class="max-w-6xl mx-auto px-4 py-10 text-center text-gray-500 text-sm">
       © 2025 <span class="font-semibold">Qudwatuna</span>. جميع الحقوق محفوظة.
@@ -110,16 +108,11 @@
 
   <!-- Scripts -->
   <script src="./node_modules/aos/dist/aos.js"></script>
-  <!-- ملف البيانات -->
   <script src="./src/js/stories.js"></script>
-  <!-- سكربت عام -->
   <script src="./src/js/script.js"></script>
 
-  <!-- سكربت تحميل القصة -->
+  <!-- سكربت  القصة -->
   <script>
-    AOS?.init?.({ duration: 700, once: true });
-
-    // اقرأ id من الرابط
     const params = new URLSearchParams(location.search);
     const id = params.get('id');
 
